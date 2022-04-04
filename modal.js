@@ -5,7 +5,7 @@ const launchModalBtn = document.querySelectorAll(".modal-btn");
 const closeModalBtn = document.querySelectorAll(".close-modal");
 const form = document.getElementById("reserve");
 
-//
+// edit nav menu bars
 const editNav = () => {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -14,9 +14,6 @@ const editNav = () => {
     x.className = "topnav";
   }
 };
-
-// launch modal event
-menuBars.addEventListener("click", editNav);
 
 // launch modal form
 const launchModal = () => {
@@ -28,6 +25,9 @@ const launchModal = () => {
 const closeModal = () => {
   modalbg.style.display = "none";
 };
+
+// menu bars event
+menuBars.addEventListener("click", editNav);
 
 // launch modal event
 launchModalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
@@ -88,8 +88,15 @@ const checkInput = (data) => {
 const validInput = (input, regexp) => {
   let isValid = false;
 
-  if (regexp && regexp.test(input.value)) isValid = true;
-  else {
+  if (regexp && regexp.test(input.value)) {
+    isValid = true;
+    if (input.name == "birthdate") {
+      const date = new Date();
+      let newDate = input.value.split("-");
+      newDate = new Date(newDate[0], newDate[1] - 1, newDate[2]);
+      isValid = newDate <= date ? true : false;
+    }
+  } else {
     if (input.name == "location") {
       input.parentNode.querySelectorAll("input").forEach((input) => {
         if (input.checked) isValid = true;
