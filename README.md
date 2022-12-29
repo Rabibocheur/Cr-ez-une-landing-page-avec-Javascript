@@ -1,6 +1,5 @@
-# Créez un site accessible pour une plateforme de photographes
+# Créez une landing page avec Javascript
 
-Depuis quelques semaines, vous êtes développeur junior chez Techasite, une société de conseil spécialisée dans le développement de sites web et d'applications mobiles.
+Vous avez récemment été embauché comme développeur Front-End junior dans une PME, GameOn, spécialisée dans les conférences et les concours de jeux. Vous avez fait du shadowing de votre développeur principal, Erika, pour suivre son travail au quotidien.
 
-Avec votre cheffe de projet Amanda et le Designer UI, vous venez de faire une réunion de lancement du projet avec un nouveau client, FishEye. FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux. Ils ont récemment levé des fonds et aimeraient mettre à jour leur site web.
-
+V
